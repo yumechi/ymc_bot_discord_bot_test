@@ -4,6 +4,8 @@ from typing import List
 
 import discord
 
+# 参考: https://qiita.com/1ntegrale9/items/9d570ef8175cf178468f
+
 TOKEN = os.getenv('TOKEN')
 
 client = discord.Client()
