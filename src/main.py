@@ -14,7 +14,11 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('ログインしました')
-
+    login_channel = os.getenv('LOGIN_CHANNEL')
+    if login_channel:
+        login_channel_id = int(login_channel)
+        channel = client.get_channel(login_channel_id)
+        await channel.send('起動したやで')
 
 # メッセージ受信時に動作する処理
 @client.event
